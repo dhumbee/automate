@@ -24,7 +24,7 @@ def main():
 def dailyreport():
 
     #create db connection
-    cnx = msql.connect(user='gone', password='fishing', port = '3305', host='192.168.88.88', database='fintronx_llc_live')
+    cnx = msql.connect(user='***', password='***', port = '3305', host='192.168.00.00', database='work_db')
 
     #store sql file
     dailysales = open(r"C:\Users\dhumm\OneDrive\Documents\SQL_FB_Queries\dailySalesReport.sql")
@@ -81,10 +81,8 @@ def sendEmail(file):
     #send email to desired receipients
     outlook = win32.Dispatch('outlook.application')
     mail = outlook.CreateItem(0x0)
-    #mail.To = 'dhummel@fintronxled.com'
-    mail.To = '''droberson@fintronxled.com; dfaithful@fintronxled.com; neil.tolley@fintronxled.com;
-    elucas@fintronxled.com;  swordsworth@cpfrm.com; pforbis@fintronxled.com; byates@cpfrm.com; clin@fintronxled.com;
-    eadams@fintronxled.com; dhummel@fintronxled.com; dmartin@execdomain.com'''
+    
+    mail.To = '''email@example.com'''
     mail.Subject = 'Fintronx Daily Sales Report'
     mail.Body = 'See attached daily sales report.  Please let me know if you no longer wish to receive this email.'
 
